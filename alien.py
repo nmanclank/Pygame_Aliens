@@ -10,7 +10,9 @@ class Alien(Sprite):
         self.settings = alleyuns_game.settings
 
         #img load and rect init
-        self.image = pygame.image.load("resources/images/alien.png")
+        self.image = pygame.image.load("resources/images/alien.png").convert_alpha()
+        #self.image = pygame.transform.scale(self.image, (75, 75))
+        #self.rect = self.image.get_rect()
         self.rect = self.image.get_rect()
 
         #start loc

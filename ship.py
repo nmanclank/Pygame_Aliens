@@ -1,11 +1,14 @@
 import pygame
+from pygame.sprite import Sprite
 
 
-class Ship:
+class Ship(Sprite):
     """ A class for the 'ship'. """
 
     def __init__(self, alleyuns):
         """ Initialization for ship and position """
+        super().__init__()
+
         self.screen = alleyuns.screen
         self.screen_rect = alleyuns.screen.get_rect() ## LOL git_rekt()
 
